@@ -353,6 +353,8 @@ pub struct DrawTarget {
     transform: Transform,
 }
 
+unsafe impl Send for DrawTarget {}
+
 impl DrawTarget {
     pub fn new(width: i32, height: i32) -> DrawTarget {
         DrawTarget {
